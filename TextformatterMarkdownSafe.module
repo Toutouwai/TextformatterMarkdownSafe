@@ -1,0 +1,23 @@
+<?php namespace ProcessWire;
+
+/**
+ * Textformatter that simply applies $sanitizer->entitiesMarkdown.
+ * 
+ */
+
+class TextformatterMarkdownSafe extends Textformatter {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'Markdown Safe',
+			'version' => '0.1.0',
+			'summary' => 'Applies $sanitizer->entitiesMarkdown() so only safe HTML tags are allowed.',
+			'author' => 'Robin Sallis',
+		); 
+	}
+
+	public function format(&$str) {
+		$str = $this->wire()->sanitizer->entitiesMarkdown($str);
+	}
+
+}
