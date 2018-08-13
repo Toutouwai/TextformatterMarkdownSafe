@@ -2,7 +2,7 @@
 
 /**
  * Textformatter that simply applies $sanitizer->entitiesMarkdown.
- * 
+ *
  */
 
 class TextformatterMarkdownSafe extends Textformatter {
