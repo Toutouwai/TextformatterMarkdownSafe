@@ -1,7 +1,19 @@
 <?php namespace ProcessWire;
 
 /**
- * Textformatter that simply applies $sanitizer->entitiesMarkdown.
+ *
+ * Textformatter Markdown Safe
+ *
+ * See README for when you might use this module.
+ *
+ * @author Robin Sallis
+ *
+ * ProcessWire 3.x
+ * Copyright (C) 2011 by Ryan Cramer
+ * Licensed under GNU/GPL v2, see LICENSE.TXT
+ *
+ * http://www.processwire.com
+ * http://www.ryancramer.com
  *
  */
 
@@ -9,11 +21,14 @@ class TextformatterMarkdownSafe extends Textformatter {
 
 	public static function getModuleInfo() {
 		return array(
-			'title' => 'Markdown Safe',
-			'version' => '0.1.0',
+			'title' => 'Textformatter Markdown Safe',
 			'summary' => 'Applies $sanitizer->entitiesMarkdown() so only safe HTML tags are allowed.',
+			'version' => '0.1.1',
 			'author' => 'Robin Sallis',
-		); 
+			'href' => 'https://github.com/Toutouwai/TextformatterMarkdownSafe',
+			'icon' => 'file-text',
+			'requires' => 'ProcessWire>=3.0.0',
+		);
 	}
 
 	public function format(&$str) {
