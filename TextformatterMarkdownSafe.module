@@ -21,7 +21,7 @@ class TextformatterMarkdownSafe extends Textformatter {
 
 	public static function getModuleInfo() {
 		return array(
-			'title' => 'Textformatter Markdown Safe',
+			'title' => 'Markdown Safe',
 			'summary' => 'Applies $sanitizer->entitiesMarkdown() so only safe HTML tags are allowed.',
 			'version' => '0.1.1',
 			'author' => 'Robin Sallis',
